@@ -15,7 +15,7 @@ mongo.connect('mongodb://localhost:27017/tasksdb', function (err, db) {
     Tasks.add = function (data, callback) {
         coll.insert(data, function (err, res) {
             if (err)
-                throw err;
+                throw new Error( err );
             callback();
         });
     };
@@ -23,7 +23,7 @@ mongo.connect('mongodb://localhost:27017/tasksdb', function (err, db) {
     Tasks.del = function (id, callback) {
         coll.remove({id: id, type: 'task'}, function (err, res) {
             if (err)
-                throw err;
+                throw new Error( err );
             callback();
         });
     };
