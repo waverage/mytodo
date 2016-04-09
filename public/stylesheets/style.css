@@ -1,0 +1,44 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;}
+
+input {
+	display: block;
+	width: 100%;
+	font-size: 16px;}
+
+button {
+	outline: none;
+	border: 0;}
+
+.todo-list {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 805px;}
+
+.item-text {
+	width: 500px;
+	max-width: 500px;
+	word-wrap: break-word;
+	font-size: 18px;}
+
+.item-date {
+	width: 200px;}
+
+#task_text {
+	display: block;
+	width: 100%;
+	font-size: 16px;}
+
+#btn-add-task {
+	font-size: 30px;}
+
+.td-control {
+	vertical-align: middle!important;
+	text-align: center;
+	border: 0px;}
+
+.td-control button {
+	display: inline;
+	background: #fff;
+	font-size: 22px;}

@@ -1,0 +1,25 @@
+extends layout
+block content
+	h1 My todo list
+	table(class='todo-list table table-bordered')
+		tr(class='info')
+			th
+			th
+			th Задача
+			th Время
+		for item in data
+			tr(id=item.id)
+				td(class='td-control')
+					button(class='btn-remove-task glyphicon glyphicon-remove', title='Удалить')
+				td(class='td-control')
+					button(class='btn-update-task glyphicon glyphicon-pencil', title='Редактировать')
+				td(class='item-text', spellcheck='false') #{item.text}
+				td(class='item-date') 
+					input(type='text', name='datepicker', value=item.date, class='datepicker', disabled='disabled')
+		tr(id='add-row')
+			td(colspan='2', class='td-control')
+				button(id='btn-add-task', class='glyphicon glyphicon-plus', title='Добавить')
+			td
+				textarea(placeholder='Ваша задача', id='task_text', spellcheck='false')
+			td(class='item-date')
+				input(type='text', name='task-data', id='task-data', class='datepicker', placeholder='Время')
